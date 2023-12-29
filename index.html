@@ -2,10 +2,10 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8" />
-    <title>Don't build (or build) that feature</title>
-    <meta name="description" content="A simple, opinionated decision system to help decide whether to build a software feature or not." />
-    <link rel="shortcut icon" href="https://dont.build/favicon.png" />
-    <meta property="og:image" content="https://dont.build/thumb.png">
+    <title>Don't spend money on that purchase</title>
+    <meta name="description" content="A simple, opinionated tool for helping decide whether to buy that one thing or not." />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <meta property="og:image" content="/thumb.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css?v=2" rel="stylesheet" type="text/css" />
 </head>
@@ -14,38 +14,38 @@
 <div class="container">
     <section class="box">
         <p class="help">1: Low, 10: High</p>
-        <h1 class="title">Don't build (or build) that feature</h1>
-        <p>A simple, opinionated tool for helping decide whether a software feature is worth building.</p>
+        <h1 class="title">Don't spend money on that impulsive purchase</h1>
+        <p>A simple, opinionated tool for helping decide whether to buy that one thing or not.</p>
         <br />
         <form class="form">
-            <fieldset class="p-users">
+            <fieldset class="p-need">
                 <span class="value"></span>
-                <label>What proportion of users (1 = a small proportion, 10 = all users) are likely to use the feature?</label>
+                <label>How really do I need this product/service ?</label>
                 <input type="range" min="1" max="10" step="0.5" value="5.5" />
             </fieldset> 
-            <fieldset class="p-effort">
+            <fieldset class="p-finances">
                 <span class="value"></span>
-                <label>What is the time, technical effort, and cost to build the feature?</label>
+                <label>How much stress will this purchase add to my finances?</label>
                 <input type="range" min="1" max="10" step="0.5" value="5.5" />
             </fieldset>
-            <fieldset class="p-user-value">
+            <fieldset class="p-price-comparison">
                 <span class="value"></span>
-                <label>How important are the target users to the existing product?</label>
+                <label>Have I compared crices and options?</label>
                 <input type="range" min="1" max="10" step="0.5" value="5.5" />
             </fieldset>
-            <fieldset class="p-operational-complexity">
+            <fieldset class="p-usage-frequency">
                 <span class="value"></span>
-                <label>What is the operational / business complexity of the feature?</label>
+                <label>How often will I use It?</label>
                 <input type="range" min="1" max="10" step="0.5" value="5.5" />
             </fieldset>
-            <fieldset class="p-feature-value">
+            <fieldset class="p-purchase-relevance">
                 <span class="value"></span>
-                <label>How valuable is the feature to the target users, truly?</label>
+                <label>Will I still want this after some time?</label>
                 <input type="range" min="1" max="10" step="0.5" value="5.5" />
             </fieldset>
-            <fieldset class="p-negative-impact">
+            <fieldset class="p-longterm-goals">
                 <span class="value"></span>
-                <label>How much potential technical risk can the feature bring to the rest of the product?</label>
+                <label>How does this purchase align with my long-term goals?</label>
                 <input type="range" min="1" max="10" step="0.5" value="5.5" />
             </fieldset>
         </form>
@@ -65,36 +65,22 @@
 
     <section>
         <p>
-            Technical decisions are often about being as less-wrong as possible than being right.
-            Decision parameters themselves are dependent on even more parameters, such as the business environment, expertise, team and user culture,
-            cost ... There is no one-size-fits all framework for making technical decisions, especially when it comes
-            to adding a new feature to a product as they often (rightly) tend to be subjective bets than scientific conclusions.
-        </p>
-        <p>
-            This is one opinionated decision making system (a highly simplified version of it) that tries to bring in
-            elements of objectivity to making feature decisions in software products. This system has worked pretty well for me personally
-            and at work, <a href="https://zerodha.com">Zerodha</a>. So, it might work for others too. View this page's source for the logic and rationale. 
-            Context:
-            <a href="https://zerodha.tech/blog/hello-world/">[1]</a>
-            <a href="https://zerodha.tech/blog/scaling-with-common-sense/">[2]</a>
-            <a href="https://zerodha.tech/blog/being-future-ready-with-common-sense/">[3]</a>
-            <a href="https://nadh.in/blog/fomo-yamo/">[4]</a>
-        </p>
+            When considering an impulsive purchase, it's wise to ask yourself a series of reflective questions to determine if the purchase is prudent.</p>
     </section>
     
-    <footer><a href="https://nadh.in">Kailash Nadh</a> &mdash; 2022 / <a href="https://github.com/knadh/dont.build">GitHub</a></footer>
+    <footer>Inspired fork from <a href="https://dont.build">dont.build</a> &mdash; 2023 / <a href="https://github.com/realvinay/dontspend.money">GitHub</a></footer>
 </div>
 
 
 <script>
 (function() {
     const params = [
-        { weight: 0.10, value: 5.5, negative: false, name: 'p-users', },
-        { weight: 0.20, value: 5.5, negative: false, name: 'p-user-value',},
-        { weight: 0.20, value: 5.5, negative: false, name: 'p-feature-value',},
-        { weight: 0.15, value: 5.5, negative: true,  name: 'p-effort', },
-        { weight: 0.20, value: 5.5, negative: true,  name: 'p-negative-impact',},
-        { weight: 0.15, value: 5.5, negative: true,  name: 'p-operational-complexity',},
+        { weight: 0.10, value: 5.5, negative: false, name: 'p-need', },
+        { weight: 0.20, value: 5.5, negative: true, name: 'p-finances',},
+        { weight: 0.20, value: 5.5, negative: false, name: 'p-price-comparison',},
+        { weight: 0.15, value: 5.5, negative: false,  name: 'p-usage-frequency', },
+        { weight: 0.20, value: 5.5, negative: false,  name: 'p-purchase-relevance',},
+        { weight: 0.15, value: 5.5, negative: false,  name: 'p-longterm-goals',},
     ]
 
     params.forEach((p, n) => {
