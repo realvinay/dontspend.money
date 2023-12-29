@@ -76,13 +76,13 @@
 <script>
 (function() {
     const params = [
-        { weight: 0.20, value: 5.5, negative: false, name: 'p-need', },
-        { weight: 0.20, value: 5.5, negative: true, name: 'p-finances',},
-        { weight: 0.20, value: 5.5, negative: false, name: 'p-price-comparison',},
-        { weight: 0.20, value: 5.5, negative: false,  name: 'p-usage-frequency', },
-        { weight: 0.10, value: 5.5, negative: false,  name: 'p-purchase-relevance',},
-        { weight: 0.10, value: 5.5, negative: false,  name: 'p-longterm-goals',},
-    ]
+    { weight: 0.25, value: 5.5, negative: false, name: 'p-need' },
+    { weight: 0.30, value: 5.5, negative: true, name: 'p-finances' },
+    { weight: 0.15, value: 5.5, negative: false, name: 'p-price-comparison' },
+    { weight: 0.15, value: 5.5, negative: false, name: 'p-usage-frequency' },
+    { weight: 0.10, value: 5.5, negative: false, name: 'p-purchase-relevance' },
+    { weight: 0.05, value: 5.5, negative: false, name: 'p-longterm-goals' },
+]
 
     params.forEach((p, n) => {
         let net = 0;
