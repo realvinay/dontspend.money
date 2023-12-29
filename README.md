@@ -1,4 +1,4 @@
-# Build or don't build?
+# Buy or don't buy?
 
 Visit [**dontspend.money**](https://dontspend.money).
 
